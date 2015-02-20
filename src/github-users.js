@@ -1,7 +1,7 @@
 var app = angular.module('githubUsers', ['ngResource']);
 
 app.factory('User', ['$resource', function (resource) {
-    return resource("http://api.github.com/users");
+    return resource("https://api.github.com/users");
 }]);
 
 app.directive('usersList', ['User', '$http', function (User, http) {
